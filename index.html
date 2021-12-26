@@ -26,13 +26,12 @@
     <div class="container">
         <nav class="header-navigation">
           <a class="logo link" href="" lang="en">Web<span class="header-accent">Studio</span></a>
-              <ul class="header-list list">
+              <ul class="header-list">
               <li class="header-item">
-              <a class="header-link link pointer" href="./index.html"> <svg class="contact-vector" width="16" height="14px">
-                <use href="./images4/icons.svg#icon-vector/"></use></svg>Студия</a>
+              <a class="header-link link current" href="./index.html">Студия</a>
             </li>
             <li class="header-item">
-              <a class="header-link link" href="./portfolio.html">Портфолио</a>
+              <a class="header-link link " href="./portfolio.html">Портфолио</a>
             </li>
             <li class="header-item"><a class="header-link link" href="">Контакты</a></li>
           </ul>
@@ -40,16 +39,14 @@
           <!--авторизация-->
           <div class="header-ring">
             <ul class="contact item">
-              <a href="mailto:info@devstudio.com" class="contact-link link">
-            </ul>
-                <svg class="contact-mail link" width="16" height="12px">
+              <a href="mailto:info@devstudio.com" class="contact-link-link link"><svg class="contact-mail-link link" width="16" height="12px">
                 <use href="./images4/icons.svg#icon-envelope"></use></svg> info@devstudio.com</a>
-              
+          </ul>
                   <svg class="contact-vector" width="16" height="14px"><use href="./images4/icons.svg#icon-vector/"></use></svg>
                 <ul class="contact item">
               <a href="tel:380961111111" class="header-tel link"><svg class="contact-tel" width="16" height="12px">
                 <use href="./images4/icons.svg#icon-smartphone"></use></svg>+38 096 111 11 11</a>
-                </ul>
+            </ul>
           </div>
         </nav>
       </header>
@@ -66,7 +63,7 @@
       </section> 
 
       <!--Преимущества работы-->
-      <section class="section ">
+      <section class="section-about">
         <div class="about-container ">
           <ul class="about-list">
             <li class="about-item">
@@ -100,7 +97,7 @@
               </p>
             </li>
 
-            <li class="about-item">
+            <li class="about-item_item">
                 <div class="features-icon">
                 <svg class="socials-icon" width="70" height="70"> <use href="./images4/icons.svg#icon-astronaut"></use> </svg>
               </div>
@@ -114,7 +111,7 @@
       </section>
 
       <!--  Примеры работ-->
-      <section class="section gallery">
+      <section class="section-gallery">
         <div class="container-gallery ">
           <h3 class="gallery-title">Чем мы занимаемся</h3>
           <ul class="gallery-list">
@@ -131,13 +128,13 @@
         </div>
       </section>
       <!--Команда работников-->
-      <section class="section masters">
+      <section class="section-masters">
       <div class="container-masters">
           <h3 class="masters-title">Наша команда</h3>
           <ul class="masters-list list">
             <li class="masters-item">
               <img src="./images/img4.jpg" alt="Игорь Демьяненко" width="270" height="260" />
-              <div class="masters-item content">
+              <div class=masters-name-professions>
               <h3 class="masters-member">Игорь Демьяненко</h3>
               <p class="masters-text" lang="en">Product Designer</p>
               <ul class="masters-social-list list "> 
@@ -170,7 +167,7 @@
             </li>
             <li class="masters-item">
               <img src="./images/img5.jpg" alt="Ольга Репина" width="270" height="260" />
-              <div class="masters-item content">
+              <div class=masters-name-professions>
               <h3 class="masters-member">Ольга Репина</h3>
               <p class="masters-text" lang="en">Frontend Developer</p>
               <ul class="masters-social-list list "> 
@@ -203,8 +200,8 @@
             </li>
             <li class="masters-item">
               <img src="./images/img6.jpg" alt="Николай Тарасов" width="270" height="260" />
-              <div class="masters-item content">
-              <h3 class="masters-member">Николай Тарасов</h3>
+              <div class="masters-name-professions">
+              <h3 class="masters-member">Николай Тарасов
               <p class="masters-text" lang="en">Frontend Developer</p>
               <ul class="masters-social-list list "> 
                 <li class="masters-social-item">
@@ -232,11 +229,12 @@
                   </a>
                 </li>
               </ul>
+              </h3>
               </div>
             </li>
             <li class="masters-item">
               <img src="./images/img7.jpg" alt="Михаил Ермаков" width="270" height="260" />
-            <div class="masters-item content">
+            <div class=masters-name-professions>
               <h3 class="masters-member">Михаил Ермаков</h3>
               <p class="masters-text" lang="en">UI Designer</p>
               <ul class="masters-social-list list "> 
@@ -268,9 +266,10 @@
               </div>
             </li>
           </ul>
-          <section class="section customers">
-          <div class="container-customers">
-            <h3 class="customers-title">Постоянные клиенты</h3>
+          </section>
+          <section class="section-customers">
+          <div class=masters-name-professions>
+            <h2 class="customers-title">Постоянные клиенты</h2>
               <ul class="customers-list list">
                 <li class="customers-item">
                   <a href="" class="customers-link">
@@ -279,7 +278,7 @@
                   </li>
                   <li class="customers-item">
                   <a href="" class="customers-link">
-                    <svg class="customers-icon" width="170"height="92">
+                    <svg class="customers-icon-logo2" width="170"height="92">
                   <use href="./images4/icons.svg#icon-logo2"></use></svg></a>
                   </li>
                     <li class="customers-item">
@@ -304,13 +303,12 @@
                   </li>
               </ul>
               </div>
-          </section>
         </div>
       </section>
     </main>
 
     <!--подвал-->
-    <footer class="footer">
+    <section class="section-footer">
       <div class="container-footer">
         <div class="container-footer-contact">
         <a class="logo link" href="" lang="en">Web<span class="footer-accent">Studio</span></a>
@@ -338,7 +336,7 @@
                 </li>
                   <li class="second-footer-item">
                   <a href="" class="footer-social-link">
-                    <svg class="second-footer-icon" width="20"height="16"><use href="./images4/icons.svg#icon-twitter"></use></svg>
+                  <svg class="second-footer-icon" width="20"height="16"><use href="./images4/icons.svg#icon-twitter"></use></svg>
                   </a>
                 </li>
                   <li class="second-footer-item">
@@ -354,7 +352,7 @@
               </ul>
           </div>
     </div>
-    </footer>
+    </section>
     </div>
   </body>
 </html>
