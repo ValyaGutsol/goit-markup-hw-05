@@ -21,8 +21,9 @@ body {
   --card-set-gar: 30px;
   --features-icon-background: #f5f4fa;
   --color-icon: #afb1b8;
+  --header-brd-line-color: #ececec;
 }
-#afb1b8 p,
+p,
 h1,
 h2,
 h3,
@@ -97,6 +98,7 @@ html {
   display: block;
   padding-top: 25px;
   padding-bottom: 24px;
+  border-bottom: 1px solid var(--header-brd-line-color);
 }
 
 .header-navigation {
@@ -113,6 +115,8 @@ html {
 }
 .header-list {
   display: flex;
+  margin-top: 32px;
+  margin-bottom: 32px;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.02em;
@@ -121,32 +125,18 @@ html {
 .header-item {
   display: flex;
   position: relative;
-  margin-right: 50px;
   color: rgba(33, 150, 243, 1);
 }
-.header-link-link-current {
+.header-link.current-pointer ::after {
   display: block;
   text-decoration: none;
   position: relative;
   color: rgba(33, 150, 243, 1);
 }
-/*.header-link-link-current{
-  content:"";
-  width: 48px;
-  height: 4px;
-  background-color:  var(--accent-color);
-  position: relative;
-  position: bottom 21px;
-  border-radius: 4px;
-  display:flex ;
-  flex-direction: column;
-  align-items: center; 
-  margin-bottom: 32px;
-}*/
 
 .header-ring {
   margin-left: auto;
-  margin-right: avto;
+
   display: flex;
   align-items: center;
 }
@@ -155,21 +145,22 @@ html {
   display: block;
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.17;
-  letter-spacing: 0.02em;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
   color: var(--main-text-color);
-  margin-left: 15px;
+  /* margin-left: 30px;*/
 }
 
 .contact-link-link {
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.17px;
-  letter-spacing: 0.02em;
+  line-height: 1.4px;
+  letter-spacing: 0.03em;
   margin-left: 10px;
   color: var(--main-text-color);
   fill: currentColor;
-  transition: color 300ms linear;
+  text-decoration: none;
+  align-items: center;
 }
 
 .contact-link-link:hover,
@@ -177,9 +168,8 @@ html {
   color: var(--accent-color);
 }
 .contact-mail-link {
-  margin-right: 10px;
   fill: currentColor;
-  transition: color 300ms linear;
+  margin-right: 10px;
 }
 .contact-mail-link:hover,
 .contact-mail-link :focus {
@@ -187,15 +177,15 @@ html {
 }
 
 .contact-tel {
-  width: 16px;
-  height: 12px;
   margin-right: 10px;
   fill: currentColor;
-  transition: color 300ms linear;
 }
 .header-tel:hover,
 .header-tel:focus {
   color: var(--accent-color);
+}
+.header-list .header-item + .header-item {
+  margin-left: 30px;
 }
 
 /*   HEADER PORTFOlIO    */
@@ -236,7 +226,7 @@ html {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   color: #212121;
   transition: color 300ms linear;
 }
@@ -511,7 +501,7 @@ html {
   line-height: 1.18;
   letter-spacing: 0.03em;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 15px;
   color: var(--secondary-text-color);
 }
 .masters-text {
@@ -635,21 +625,21 @@ html {
 
 /* Портфолио  презентация*/
 
-.section-portfolio {
+.section {
   padding-top: 94px;
   padding-bottom: 94px;
-}
-.section-portfolio {
-  width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: -15px;
+}
+.container {
+  width: 1200px;
+  padding-left: 15px;
   padding-right: 15px;
 }
-.container-portfolio {
+/*.container {
   align-items: baseline;
   margin-left: 70px;
-}
+}*/
 .hidden {
   position: absolute;
   width: 1px;
@@ -727,55 +717,46 @@ html {
 }
 
 /* Портфолио  карточки*/
-.container-card {
-  fill: rgba(255, 255, 255, 1);
-}
-.card-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-/* padding-bottom: 30px;
-  margin-top: 50px;
-  margin-top: -30px;
-  margin-left: -30px;*/
-.card-item {
-  margin-left: 30px;
-  margin-top: 30px;
-}
+
 .card-list {
   display: flex;
   justify-content: center;
   list-style: none;
-  display: flex;
   flex-wrap: wrap;
-  padding-bottom: 30px;
   margin-left: -30px;
   margin-top: -30px;
+  transition: box-shadow 250ms;
+  transition-timing-function: cubic-bezier(5.4, 0, 0.2, 1);
 }
-
-.cards-name {
-  flex-basis: calc(100% / 3 - 30px);
+/*.card-list__project-description {
   display: block;
-}
-
-.card-title:not(:last-child) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 63px 24px;
+  width: 370px;
+  height: 294px;
+  bottom: 110px;
   font-size: 18px;
-  line-height: 2;
-  margin-bottom: 4px;
-  padding-bottom: 4px;
-  padding-top: 20px;
-  color: var(--secondary-title-color);
-}
-
+  line-height: 1.55;
+  margin-top: 0px;
+  letter-spacing: 0.03em;
+  color: var(--section-text-color);
+  background: var(--card-bcg-color);
+  -webkit-transform: translateY(101%);
+  transform: translateY(101%);
+  -webkit-transition: -webkit-transform var(--animation-duration) var(--animation-function);
+  transition: -webkit-transform var(--animation-duration) var(--animation-function);
+  transition: transform var(--animation-duration) var(--animation-function);
+  transition: transform var(--animation-duration) var(--animation-function),
+    -webkit-transform var(--animation-duration) var(--animation-function);
+}*/
 .card-item {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 24px;
-  box-sizing: border-box;
-  color: #ffffff;
-  background: var(--accent-color);
-  background: #ffffff;
-  transition: color 300ms linear;
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
+  background-color: var(--main-title-color);
 }
 .card-item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -784,13 +765,29 @@ html {
 }
 
 .cards-name {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-right: 24px;
+  padding: 20px 24px;
+  box-sizing: border-box;
   color: #ffffff;
   border: 1px solid #eeeeee;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 4px;
+  /*transition: color 300ms linear;*/
 }
+
+.card-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+  margin-right: 4px;
+  color: var(--secondary-title-color);
+}
+
 .card-text {
+  font-style: normal;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
