@@ -115,8 +115,7 @@ html {
 }
 .header-list {
   display: flex;
-  margin-top: 32px;
-  margin-bottom: 32px;
+
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.02em;
@@ -127,20 +126,82 @@ html {
   position: relative;
   color: rgba(33, 150, 243, 1);
 }
-.header-link.current-pointer ::after {
+
+.header-item {
   display: block;
   text-decoration: none;
   position: relative;
   color: rgba(33, 150, 243, 1);
 }
+.header-link {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+.header-link-prtf {
+  display: block;
+  color: var(--main-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  bottom: -1px;
+}
+.header-link .header-link-prtf {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+.current::after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  margin: 0;
+  position: absolute;
+  position: bottom 21px;
+  left: 0;
+  bottom: 10px;
+  width: 48px;
+  height: 4px;
+  background: var(--accent-color);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 21px;
+}
+.current-pointer::after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  margin: 0;
+  position: absolute;
+  position: bottom 21px;
+  left: 0;
+  bottom: 10;
+  width: 78px;
+  height: 4px;
+  background: var(--accent-color);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 21px;
+}
 
 .header-ring {
   margin-left: auto;
-
   display: flex;
   align-items: center;
 }
-.header-mail,
+.header-mail {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+  margin-left: 10px;
+}
 .header-tel {
   display: block;
   font-weight: 500;
@@ -148,7 +209,6 @@ html {
   line-height: 1.14;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
-  /* margin-left: 30px;*/
 }
 
 .contact-link-link {
@@ -422,7 +482,7 @@ html {
 }
 
 /*---Команда работников---*/
-.section-masters {
+.section {
   padding-top: 94px;
   padding-bottom: 94px;
   background-color: #f5f4fa;
@@ -468,6 +528,7 @@ html {
   justify-content: center;
   align-items: center;
   margin-top: 16px;
+  padding-bottom: 30px;
 }
 .masters-social-item {
   width: 44px;
@@ -514,6 +575,7 @@ html {
   line-height: 1.18;
   letter-spacing: 0.03em;
   text-align: center;
+  padding-top: 30px;
   color: var(--secondary-text-color);
 }
 .masters-text {
@@ -737,7 +799,7 @@ html {
   margin-left: -30px;
   margin-top: -30px;
   transition: box-shadow 250ms;
-  transition-timing-function: cubic-bezier(5.4, 0, 0.2, 1);
+  /* transition-timing-function: cubic-bezier(5.4, 0, 0.2, 1);*/
 }
 /*.card-list__project-description {
   display: block;
@@ -807,17 +869,12 @@ html {
 
 /*---ПОДВАЛ---*/
 
-.footer {
+.page-footer {
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
 }
 .container-footer {
-  display: flex;
-  align-items: baseline;
-}
-
-.container {
   display: flex;
   align-items: baseline;
 }
@@ -842,7 +899,7 @@ html {
 }
 .footer-contact {
   margin-left: 215px;
-  margin-top: 20px;
+  /* margin-top: 20px;*/
   transition: color 300ms linear;
 }
 .footer-contacts:hover,
